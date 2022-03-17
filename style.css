@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Syne Mono', monospace;
+    word-wrap: break-word;
+}
+
+p, code{
+    margin-left: .5em;
+    margin-bottom: .7em;
+}
+li{
+    margin-bottom: .7em;
+    margin-left: 1.5em;
+}
+code{
+    margin: 1em 0;
+    display: block;
+    padding: 1.4em;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #eefcff;
+}
+
+header{
+    font-family: 'Bungee Inline', cursive;
+}
+
+body{
+    display: grid;
+    grid-template-columns:  1fr 8fr;
+    overflow-x: hidden;
+}
+#header-nav{
+    position: sticky;
+    top: 0;
+    left: 0%;
+    display: flex;
+    height: 100vh;
+    padding: 0 .8em;
+    justify-content: center;
+    align-items: center;
+    background-color: #cfe7ec;
+    user-select: none;
+}
+section header{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 1em 0;
+}
+main{
+    margin: 0 1em;
+}
+
+.menu-item p{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.menu-item li{
+    list-style: none;
+    font-size: 1.1em;
+    color: #000;
+}
+.menu-item:hover{
+    cursor: pointer;
+}
+.no-visible{
+    display: none;
+}
+.color{
+    color: #1369ab;
+}
+#btnModal{
+    display: none;
+}
+@media only screen and (max-width: 1525px){
+    .menu-item li{
+        margin-left: .6em;
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 545px){
+#header-nav{
+        position: fixed;
+        z-index: 101;
+        display: flex;
+        flex-direction: column;
+        width: calc(100vw - 6em);
+        background-color: #22222257;
+        left: -4300px;
+    }
+    section header{
+        font-size: 1.5em;
+    }
+    #header-nav header{
+        font-size: 2.1em;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    .active{
+        transform:translateX(calc(4300px + 4.5em ));
+        transition: transform .5s;
+    }
+    #header-nav li, #header-nav p, #header-nav header{
+        color: #fafafa;
+    }
+    #header-nav p{
+        font-size: 1.9em;
+        margin-bottom: .2em;
+    }
+    #header-nav li{
+        font-size: 1.3em;
+        margin: .3em 0;
+    }
+    #header-nav li:hover{
+        background-color: #cfe7ec;
+        color: #000;
+        transition: .5s all;
+    }
+    #btnModal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #cfe7ec;
+        height: 100%;
+        z-index: 102;
+    }
+    #btnMenu{
+        z-index: 103;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 4.5em;
+    }
+    #main-doc{
+        width: 60%;
+    }
+    code{
+        width: 80%;
+    }
+}
+
+
